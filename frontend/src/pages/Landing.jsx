@@ -269,7 +269,7 @@ export default function Landing() {
             <Link to="/browse" className="bg-blue-600 text-white px-5 py-2.5 rounded-md text-sm font-medium">
               Browse helpers
             </Link>
-            <Link to="/register" className="border border-border px-5 py-2.5 rounded-md text-sm font-medium bg-white">
+            <Link to="/register" className="border border-border px-5 py-2.5 rounded-md text-sm font-medium bg-white hover:bg-blue-600 hover:text-white transition">
               Join as a helper
             </Link>
           </div>
