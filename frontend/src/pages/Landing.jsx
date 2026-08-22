@@ -11,7 +11,7 @@
 //         verification, booking management and service tracking.
 //       </p>
 //       <div className="flex gap-3 mb-14">
-//         <Link to="/browse" className="bg-ink text-white px-5 py-2.5 rounded-md text-sm font-medium">
+//         <Link to="/browse" className="bg-blue-600 text-white px-5 py-2.5 rounded-md text-sm font-medium">
 //           Browse helpers
 //         </Link>
 //         <Link to="/register" className="border border-border px-5 py-2.5 rounded-md text-sm font-medium bg-white">
@@ -164,7 +164,7 @@ export default function Landing() {
                 placeholder="City e.g. Kolkata"
                 className="border border-border rounded-md px-3 py-2.5 text-sm bg-white flex-1"
               />
-              <button type="submit" className="bg-ink text-white rounded-md px-5 py-2.5 text-sm font-medium flex items-center justify-center gap-2">
+              <button type="submit" className="bg-blue-600 text-white rounded-md px-5 py-2.5 text-sm font-medium flex items-center justify-center gap-2">
                 <Icon name="search" className="w-4 h-4" /> Search helpers
               </button>
             </form>
@@ -199,7 +199,7 @@ export default function Landing() {
         </div>
       </div>
 
-      <div className="bg-ink text-white">
+      <div className="bg-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
           {STATS.map((s) => (
             <div key={s.label}>
@@ -266,7 +266,7 @@ export default function Landing() {
             <p className="text-inksoft">Sign up in under a minute — no commission, no monthly fees.</p>
           </div>
           <div className="flex gap-3 shrink-0">
-            <Link to="/browse" className="bg-ink text-white px-5 py-2.5 rounded-md text-sm font-medium">
+            <Link to="/browse" className="bg-blue-600 text-white px-5 py-2.5 rounded-md text-sm font-medium">
               Browse helpers
             </Link>
             <Link to="/register" className="border border-border px-5 py-2.5 rounded-md text-sm font-medium bg-white">

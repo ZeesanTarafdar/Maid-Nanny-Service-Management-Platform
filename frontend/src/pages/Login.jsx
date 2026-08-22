@@ -42,12 +42,12 @@ export default function Login() {
         </div>
         {error && <p className="text-danger text-sm">{error}</p>}
         <button type="submit" disabled={submitting}
-          className="w-full bg-ink text-white rounded-md py-2.5 text-sm font-medium disabled:opacity-50">
+          className="w-full bg-blue-600 text-white rounded-md py-2.5 text-sm font-medium disabled:opacity-50">
           {submitting ? 'Logging in…' : 'Log in'}
         </button>
       </form>
       <p className="text-sm text-muted mt-4">
-        No account? <Link to="/register" className="text-ink underline">Sign up</Link>
+        No account? <Link to="/register" className="underline text-blue-600">Sign up</Link>
       </p>
     </div>
   );

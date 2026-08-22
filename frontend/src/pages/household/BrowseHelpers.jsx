@@ -39,7 +39,7 @@
 //             key={t.value}
 //             onClick={() => setServiceType(t.value)}
 //             className={`px-3.5 py-1.5 rounded-full text-sm border transition ${
-//               serviceType === t.value ? 'bg-ink text-white border-ink' : 'bg-white border-border text-inksoft'
+//               serviceType === t.value ? 'bg-blue-600 text-white border-ink' : 'bg-white border-border text-inksoft'
 //             }`}
 //           >
 //             {t.label}
@@ -118,7 +118,7 @@ export default function BrowseHelpers() {
             key={t.value}
             onClick={() => setServiceType(t.value)}
             className={`px-3.5 py-1.5 rounded-full text-sm border transition ${
-              serviceType === t.value ? 'bg-ink text-white border-ink' : 'bg-white border-border text-inksoft'
+              serviceType === t.value ? 'bg-blue-600 text-white border-ink' : 'bg-white border-border text-inksoft'
             }`}
           >
             {t.label}

@@ -63,7 +63,7 @@ export default function HelperDashboard() {
       <div className="flex gap-2 mb-4">
         {[{ id: 'requests', label: 'Active jobs' }, { id: 'history', label: 'History' }].map((t) => (
           <button key={t.id} onClick={() => setTab(t.id)}
-            className={`px-3.5 py-1.5 rounded-full text-sm border ${tab === t.id ? 'bg-ink text-white border-ink' : 'bg-white border-border'}`}>
+            className={`px-3.5 py-1.5 rounded-full text-sm border ${tab === t.id ? 'bg-blue-600 text-white border-ink' : 'bg-white border-border'}`}>
             {t.label}
           </button>
         ))}

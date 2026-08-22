@@ -20,17 +20,17 @@ function DocumentPreviewModal({ url, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] p-4"
+      className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] p-4 " 
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div className="bg-white rounded-card shadow-card w-full max-w-2xl max-h-[85vh] flex flex-col">
         <div className="flex items-center justify-between px-4 py-3 border-b border-border">
           <h3 className="font-semibold text-sm">Document preview</h3>
           <div className="flex items-center gap-3">
-            <button onClick={onClose} className="text-muted hover:text-ink text-lg leading-none">&times;</button>
+            <button onClick={onClose} className="text-red-600 hover:text-red-800 text-lg leading-none">&times;</button>
           </div>
         </div>
-        <div className="flex-1 overflow-auto p-4 flex items-center justify-center bg-brandbg">
+        <div className="flex-1  p-4 flex items-center justify-center bg-brandbg">
           {isImage && (
             <img src={url} alt="Document preview" className="max-w-full max-h-full rounded-md" />
           )}
@@ -144,7 +144,7 @@ export default function HelperProfileEdit() {
   if (!profile) return <div className="p-10 text-center text-muted">Loading…</div>;
 
   return (
-    <div className="max-w-2xl mx-auto px-6 py-8 space-y-6">
+    <div className="max-w-2xl mx-auto px-6 py-8 ">
       <h1 className="text-2xl font-bold">Edit your profile</h1>
 
       <form onSubmit={saveProfile} className="bg-white border border-border rounded-card shadow-card p-5 space-y-3">
@@ -183,7 +183,7 @@ export default function HelperProfileEdit() {
               className="w-full border border-border rounded-md px-3 py-2 text-sm" />
           </div>
         </div>
-        <button type="submit" className="bg-ink text-white rounded-md px-4 py-2 text-sm font-medium">Save profile</button>
+        <button type="submit" className="bg-blue-600 text-white rounded-md px-4 py-2 text-sm font-medium">Save profile</button>
       </form>
 
       <div className="bg-white border border-border rounded-card shadow-card p-5 space-y-3">
@@ -211,7 +211,7 @@ export default function HelperProfileEdit() {
               className="w-full flex items-center justify-between text-sm bg-brandbg border border-border rounded-md px-3 py-2 mb-2 text-inksoft"
             >
               <span>✓ {profile.id_document_url.split('/').pop()}</span>
-              <span className="text-xs underline">View</span>
+              <span className="text-xs underline text-blue-600">View</span>
             </button>
           )}
           <input type="file" name="idDocument" accept=".pdf,.jpg,.jpeg,.png"
@@ -231,7 +231,7 @@ export default function HelperProfileEdit() {
               className="w-full flex items-center justify-between text-sm bg-brandbg border border-border rounded-md px-3 py-2 mb-2 text-inksoft"
             >
               <span>✓ {profile.background_check_url.split('/').pop()}</span>
-              <span className="text-xs underline">View</span>
+              <span className="text-xs underline text-blue-600">View</span>
             </button>
           )}
           <input type="file" name="backgroundCheck" accept=".pdf,.jpg,.jpeg,.png"
@@ -242,7 +242,7 @@ export default function HelperProfileEdit() {
           )}
         </div>
 
-        <button type="submit" className="bg-ink text-white rounded-md px-4 py-2 text-sm font-medium">
+        <button type="submit" className="bg-blue-600 text-white rounded-md px-4 py-2 text-sm font-medium">
           Submit documents for verification
         </button>
       </form>

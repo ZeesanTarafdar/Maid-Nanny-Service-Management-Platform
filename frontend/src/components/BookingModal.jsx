@@ -92,7 +92,7 @@ export default function BookingModal({ helper, plan, onClose, onBooked }) {
           {error && <p className="text-danger text-sm">{error}</p>}
 
           <button type="submit" disabled={submitting}
-            className="w-full bg-ink text-white rounded-md py-2.5 text-sm font-medium mt-2 disabled:opacity-50">
+            className="w-full bg-blue-600 text-white rounded-md py-2.5 text-sm font-medium mt-2 disabled:opacity-50">
             {submitting ? 'Booking…' : 'Confirm booking'}
           </button>
         </form>

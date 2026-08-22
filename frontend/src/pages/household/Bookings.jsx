@@ -88,7 +88,7 @@ export default function Bookings() {
                     </button>
                   )}
                   {b.status === 'completed' && !b.review_rating && reviewFor !== b.id && (
-                    <button onClick={() => openReview(b.id)} className="text-sm bg-ink text-white rounded-md px-3 py-1.5">
+                    <button onClick={() => openReview(b.id)} className="text-sm bg-blue-600 text-white rounded-md px-3 py-1.5">
                       Leave review
                     </button>
                   )}
@@ -117,7 +117,7 @@ export default function Bookings() {
                   {reviewError && <p className="text-danger text-sm">{reviewError}</p>}
                   <div className="flex gap-2">
                     <button onClick={() => submitReview(b.id)} disabled={submittingReview}
-                      className="text-sm bg-ink text-white rounded-md px-3 py-1.5 disabled:opacity-50">
+                      className="text-sm bg-blue-600 text-white rounded-md px-3 py-1.5 disabled:opacity-50">
                       {submittingReview ? 'Submitting…' : 'Submit review'}
                     </button>
                     <button onClick={() => setReviewFor(null)} disabled={submittingReview}

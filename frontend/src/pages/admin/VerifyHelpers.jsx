@@ -23,7 +23,7 @@ export default function VerifyHelpers() {
       <div className="flex gap-2 mb-6">
         {['pending', 'approved', 'rejected'].map((s) => (
           <button key={s} onClick={() => setStatus(s)}
-            className={`px-3.5 py-1.5 rounded-full text-sm border capitalize ${status === s ? 'bg-ink text-white border-ink' : 'bg-white border-border'}`}>
+            className={`px-3.5 py-1.5 rounded-full text-sm border capitalize ${status === s ? 'bg-blue-600 text-white border-ink' : 'bg-white border-border'}`}>
             {s}
           </button>
         ))}

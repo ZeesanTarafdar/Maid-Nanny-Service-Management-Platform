@@ -60,7 +60,7 @@ export default function HelperProfile() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <span className="mono font-semibold">₹{p.price}</span>
-              <button onClick={() => handleBookClick(p)} className="text-sm bg-ink text-white px-3 py-1.5 rounded-md">
+              <button onClick={() => handleBookClick(p)} className="text-sm bg-blue-600 text-white px-3 py-1.5 rounded-md">
                 Book
               </button>
             </div>
@@ -97,7 +97,7 @@ export default function HelperProfile() {
         />
       )}
       {bookedMsg && (
-        <div className="fixed bottom-6 right-6 bg-ink text-white px-4 py-3 rounded-md text-sm shadow-card">
+        <div className="fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-3 rounded-md text-sm shadow-card">
           {bookedMsg}
         </div>
       )}

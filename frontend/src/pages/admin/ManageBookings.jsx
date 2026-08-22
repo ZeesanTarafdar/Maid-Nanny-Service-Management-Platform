@@ -26,7 +26,7 @@ export default function ManageBookings() {
       <div className="flex flex-wrap gap-2 mb-6">
         {STATUSES.map((s) => (
           <button key={s || 'all'} onClick={() => setStatus(s)}
-            className={`px-3.5 py-1.5 rounded-full text-sm border capitalize ${status === s ? 'bg-ink text-white border-ink' : 'bg-white border-border'}`}>
+            className={`px-3.5 py-1.5 rounded-full text-sm border capitalize ${status === s ? 'bg-blue-600 text-white border-ink' : 'bg-white border-border'}`}>
             {s ? s.replace('_', ' ') : 'All'}
           </button>
         ))}
