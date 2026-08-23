@@ -52,32 +52,32 @@ export default function Register() {
         <div>
           <label className="block text-sm mb-1">Full name</label>
           <input className="w-full border border-border rounded-md px-3 py-2 text-sm"
-            value={form.fullName} onChange={(e) => update('fullName', e.target.value)} placeholder="e.g. Ananya Sen" />
+            value={form.fullName} onChange={(e) => update('fullName', e.target.value)} placeholder="Enter full name" />
         </div>
         <div>
           <label className="block text-sm mb-1">Email</label>
           <input type="email" className="w-full border border-border rounded-md px-3 py-2 text-sm"
-            value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@example.com" />
+            value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="Enter email" />
         </div>
         <div>
           <label className="block text-sm mb-1">Mobile number</label>
           <input className="w-full border border-border rounded-md px-3 py-2 text-sm"
-            value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="98765 43210" />
+            value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="Enter mobile number" />
         </div>
         <div>
           <label className="block text-sm mb-1">Password</label>
           <input type="password" className="w-full border border-border rounded-md px-3 py-2 text-sm"
-            value={form.password} onChange={(e) => update('password', e.target.value)} placeholder="••••••••" />
+            value={form.password} onChange={(e) => update('password', e.target.value)} placeholder="Enter password" />
         </div>
         <div>
           <label className="block text-sm mb-1">City</label>
           <input className="w-full border border-border rounded-md px-3 py-2 text-sm"
-            value={form.city} onChange={(e) => update('city', e.target.value)} placeholder="Kolkata" />
+            value={form.city} onChange={(e) => update('city', e.target.value)} placeholder="Enter city" />
         </div>
         <div>
           <label className="block text-sm mb-1">Address</label>
           <input className="w-full border border-border rounded-md px-3 py-2 text-sm"
-            value={form.address} onChange={(e) => update('address', e.target.value)} placeholder="Street, area" />
+            value={form.address} onChange={(e) => update('address', e.target.value)} placeholder="Enter address" />
         </div>
 
         {role === 'helper' && (

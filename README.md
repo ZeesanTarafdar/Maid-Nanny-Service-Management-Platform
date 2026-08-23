@@ -77,9 +77,38 @@ backend can be run side by side without CORS issues in development.
 See `backend/db/schema.sql` for the full schema — core entities are `users`, `helpers`,
 `service_plans`, `services`, `bookings`, and `reviews`, matching the PRD's data requirements.
 
-## 6. Deploying
-- **Frontend**: `npm run build` in `frontend/` produces a static `dist/` folder — deploy to
-  Vercel, Netlify, or an S3+CloudFront bucket.
-- **Backend**: deploy the `backend/` folder to any Node host (Render, Railway, an AWS
-  EC2/ECS instance, etc.) and point `DATABASE_URL` at your managed PostgreSQL instance.
-- Set `VITE_API_BASE_URL` on the frontend to your deployed backend's URL before building.
+## 6. Deployment
+
+This project is deployed using the following free-tier services:
+
+- **Database**: [Neon](https://neon.tech) (managed PostgreSQL)
+- **Backend**: [Render](https://render.com) (Node.js web service)
+- **Frontend**: [Vercel](https://vercel.com) (static Vite build)
+
+### Live URLs
+- Frontend: https://maid-nanny-service-management-platform.vercel.app
+- Backend API: https://maid-nanny-service-management-platform.onrender.com/api
+
+### Deployment steps
+
+**1. Database (Neon)**
+- Create a project at neon.tech and copy the connection string
+- Run migrations and seed data against it:
+```bash
+  cd backend
+  DATABASE_URL="<your-neon-connection-string>" npm run migrate
+  DATABASE_URL="<your-neon-connection-string>" npm run seed
+```
+
+**2. Backend (Render)**
+- New Web Service → connect this repo → Root Directory: `backend`
+- Build Command: `npm install` · Start Command: `npm start`
+- Environment variables: `DATABASE_URL`, `JWT_SECRET`, `JWT_EXPIRES_IN`
+
+**3. Frontend (Vercel)**
+- New Project → connect this repo → Root Directory: `frontend`
+- Build Command: `npm run build` · Output Directory: `dist`
+- Environment variable: `VITE_API_BASE_URL` = `<your-render-backend-url>/api`
+
+Both Render and Vercel auto-redeploy on every push to `main`.
+
