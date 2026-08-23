@@ -86,7 +86,7 @@ This project is deployed using the following free-tier services:
 - **Frontend**: [Vercel](https://vercel.com) (static Vite build)
 
 ### Live URLs
-- Frontend: https://maid-nanny-service-management-platf.vercel.app/login
+- Frontend: https://maid-nanny-service-management-platf.vercel.app/
 - Backend API: https://maid-nanny-service-management-platform.onrender.com/api
 
 ### Deployment steps
