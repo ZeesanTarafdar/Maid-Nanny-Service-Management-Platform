@@ -87,7 +87,7 @@ This project is deployed using the following free-tier services:
 
 ### Live URLs
 - Frontend: https://maid-nanny-service-management-platf.vercel.app/
-- Backend API: https://maid-nanny-service-management-platform.onrender.com/api
+- Backend API: https://maid-nanny-service-management-platform.onrender.com/api/health
 
 ### Deployment steps
 
