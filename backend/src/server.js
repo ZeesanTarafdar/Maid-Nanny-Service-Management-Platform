@@ -18,6 +18,15 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Maid & Nanny Service Management Platform API',
+    status: 'running',
+    health: '/api/health',
+    docs: 'See README.md for available endpoints',
+  });
+});
+
 app.get('/api/health', (req, res) => res.json({ status: 'ok', service: 'maid-nanny-backend' }));
 
 app.use('/api/auth', authRoutes);
